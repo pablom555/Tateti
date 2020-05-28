@@ -1,0 +1,17 @@
+.Error_Cont {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Error_Text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Error_Image {
+    height: 200px;
+    margin-top: 40px;
+}
+
