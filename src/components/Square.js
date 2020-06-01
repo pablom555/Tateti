@@ -6,7 +6,7 @@ const Square = ({ value, onClick }) => (
         className="square"
         onClick={onClick}
         style={{
-            color: value === 'X'? 'red': 'blue'
+            color: value === 'X'? '#00bbf9': '#fee440'
         }}
     >
         {value}

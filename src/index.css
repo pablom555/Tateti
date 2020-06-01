@@ -20,23 +20,34 @@ body {
     content: "";
     display: table;
   }
+
+  .board-row:nth-child(-n+2) .square{
+    border-bottom: 5px solid #9b5de5;
+  }
+
+  .board-row :not(:last-child) {
+    border-right: 5px solid #9b5de5;
+  }
   
   .status {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    color: #f15bb5;
+    font: 25px 'Roboto', sans-serif;
+  }
+
+  .status span {
+    font-size: 35px;
   }
   
   .square {
     background: #fff;
-    border: 1px solid #999;
     float: left;
-    font-size: 70px;
-    font-weight: bold;
-    line-height: 100px;
+    font-size: 90px;
+    font-family: 'Permanent Marker', cursive;
+    line-height: 90px;
     height: 100px;
-    margin-right: -1px;
-    margin-top: -1px;
-    text-align: center;
     width: 100px;
+    border: none;
   }
   
   .square:focus {

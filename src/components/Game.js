@@ -1,12 +1,18 @@
 import React from 'react';
 import Board from './../components/Board';
 
-const Game = ({ squares, onClick, status, moves }) => (
+const Game = ({ squares, onClick, status: {legend, gamer}, moves }) => {
 
-    <div className="game">
+    return (<div className="game">
         <div className="game-board">
 
-            <div className="status">{status}</div>
+            <div className="status">
+                {legend}
+                <span
+                    style={{ color: gamer === 'X' ? '#00bbf9' : '#fee440' }}>
+                    {gamer}
+                </span>
+            </div>
 
             <Board
                 squares={squares}
@@ -14,11 +20,11 @@ const Game = ({ squares, onClick, status, moves }) => (
             />
 
         </div>
-        
+
         <div className="game-info">
             <ol>{moves}</ol>
         </div>
-    </div>
-);
+    </div >)
+};
 
 export default Game;

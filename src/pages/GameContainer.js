@@ -90,13 +90,20 @@ const GameContainer = () => {
     const hist = history;
     const current = hist[stepNumber];
     const winner = calculateWinner(current.squares);
-    let status;
+    let status ={
+        legend: "",
+        gamer:""
+    }
 
     if (winner) {
-        status = `Ha ganado: ${winner}`;
+        status.legend = 'Ha Ganado: ';
+        status.gamer = winner;
     } else {
-        status = `EL turno es de: ${(xIsNext ? 'X' : 'O')}`;
+        status.legend = 'El turno es de: ';
+        status.gamer = xIsNext ? 'X' : 'O';
     }
+
+    console.log(status)
 
     // recorre los movimientos y por cada uno renderiza un Boton
     const moves = hist.map((step, move) => {
