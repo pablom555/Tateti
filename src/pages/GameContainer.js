@@ -42,7 +42,9 @@ const GameContainer = () => {
         }]));
 
         setStepNumber(hist.length);
+        console.log(stepNumber)
         setXIsNext(!xIsNext);
+
     }
 
     const jumpTo = step => {
@@ -90,20 +92,26 @@ const GameContainer = () => {
     const hist = history;
     const current = hist[stepNumber];
     const winner = calculateWinner(current.squares);
-    let status ={
+
+    let status = {
         legend: "",
-        gamer:""
+        gamer: ""
     }
 
     if (winner) {
         status.legend = 'Ha Ganado: ';
         status.gamer = winner;
     } else {
-        status.legend = 'El turno es de: ';
-        status.gamer = xIsNext ? 'X' : 'O';
+
+        if (stepNumber === 9) {
+            status.legend = 'Empate, Reinicie el juego';
+            status.gamer =  '';
+        } else {
+            status.legend = 'El turno es de: ';
+            status.gamer = xIsNext ? 'X' : 'O';
+        }
     }
 
-    console.log(status)
 
     // recorre los movimientos y por cada uno renderiza un Boton
     const moves = hist.map((step, move) => {
@@ -112,7 +120,7 @@ const GameContainer = () => {
 
         return (
             <li key={move}>
-                <button onClick={() => jumpTo(move)}>{desc}</button>
+                <button className="button" onClick={() => jumpTo(move)}>{desc}</button>
             </li>
         );
     });

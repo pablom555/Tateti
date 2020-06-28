@@ -3,7 +3,8 @@ import Board from './../components/Board';
 
 const Game = ({ squares, onClick, status: {legend, gamer}, moves }) => {
 
-    return (<div className="game">
+    return (
+    <div className="game">
         <div className="game-board">
 
             <div className="status">
@@ -22,9 +23,9 @@ const Game = ({ squares, onClick, status: {legend, gamer}, moves }) => {
         </div>
 
         <div className="game-info">
-            <ol>{moves}</ol>
+            <ul>{moves}</ul>
         </div>
-    </div >)
+    </div>)
 };
 
 export default Game;

@@ -1,6 +1,7 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
+    background-color: #17202A;
   }
 
   .game {
@@ -9,6 +10,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border: 3px solid #f15bb5;
+    border-radius: 4px;
   }
   
   ol, ul {
@@ -22,17 +25,21 @@ body {
   }
 
   .board-row:nth-child(-n+2) .square{
-    border-bottom: 5px solid #9b5de5;
+    border-bottom: 10px solid #9b5de5;
   }
 
   .board-row :not(:last-child) {
-    border-right: 5px solid #9b5de5;
+    border-right: 10px solid #9b5de5;
   }
   
   .status {
     margin-bottom: 30px;
     color: #f15bb5;
     font: 25px 'Roboto', sans-serif;
+    text-align: center;
+    border: 3px solid #9b5de5;
+    border-radius: 8px;
+    padding: 5px 0 5px 0;
   }
 
   .status span {
@@ -40,13 +47,13 @@ body {
   }
   
   .square {
-    background: #fff;
+    background: #17202A;
     float: left;
-    font-size: 90px;
+    font-size: 100px;
     font-family: 'Permanent Marker', cursive;
-    line-height: 90px;
-    height: 100px;
-    width: 100px;
+    line-height: 120px;
+    height: 120px;
+    width: 120px;
     border: none;
   }
   
@@ -55,12 +62,40 @@ body {
   }
 
   .square:hover {
-    background-color: rgba(231,211,135,0.2);
+    background-color: #1C2833;
+    cursor: pointer;
   }
 
-  
   .game-info {
     margin-left: 20px;
     width: 300px;
   }
   
+  .button {
+    background-color: #1C2833;
+    border: 2px solid #f15bb5; 
+    color: #f15bb5;
+    width: 180px;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  .button {
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+    background-color: #f15bb5;
+    color: #1C2833;
+  }
+
+  ul {
+    list-style: none;
+  }
