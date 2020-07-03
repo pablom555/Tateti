@@ -6,12 +6,13 @@ body {
 
   .game {
     display: flex;
-    height: 100vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border: 3px solid #f15bb5;
     border-radius: 4px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   
   ol, ul {
@@ -98,4 +99,80 @@ body {
 
   ul {
     list-style: none;
+  }
+
+  
+  /* Media Querys*/
+  
+  @media (max-width: 1000px) {
+    
+    .square {
+        font-size: 70px;
+        line-height: 100px;
+        height: 100px;
+        width: 100px;
+      }
+
+      .button {
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+      }
+
+      .status {
+        margin-bottom: 27px;
+        font: 21px 'Roboto', sans-serif;
+      }
+    
+      .status span {
+        font-size: 30px;
+      }
+
+  }
+
+  @media (max-width: 800px) {
+    
+    .game {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 180px;
+        height: 35px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .board-row:nth-child(-n+2) .square{
+        border-bottom: 7px solid #9b5de5;
+      }
+    
+      .board-row :not(:last-child) {
+        border-right: 7px solid #9b5de5;
+      }
+
+  }
+
+  @media (max-width: 400px) {
+
+    .game {
+        min-width: 300px;
+    }
+    
+    .square {
+        font-size: 50px;
+        line-height: 80px;
+        height: 80px;
+        width: 80px;
+      }
+
+      .board-row:nth-child(-n+2) .square{
+        border-bottom: 7px solid #9b5de5;
+      }
+    
+      .board-row :not(:last-child) {
+        border-right: 7px solid #9b5de5;
+      }
+
   }
